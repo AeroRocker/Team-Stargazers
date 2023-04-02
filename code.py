@@ -1,9 +1,9 @@
 import openai
 import gradio
 
-openai.api_key = "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"
+openai.api_key = "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"
 
-messages = [{"role": "system", "content": "You are my gaming bot "}]
+messages = [{"role": "system", "content": "You are a Game designer"}]
 
 def CustomChatGPT(user_input):
     messages.append({"role": "user", "content": user_input})
@@ -15,6 +15,6 @@ def CustomChatGPT(user_input):
     messages.append({"role": "assistant", "content": ChatGPT_reply})
     return ChatGPT_reply
 
-demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "JENNY")
+demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "MAXZ")
 
 demo.launch(share=True)
